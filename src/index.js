@@ -84,11 +84,11 @@ bot.onTextMessage(/./, (message, response) => {
     checkUrlAvailability(response, message.text);
 });
 
-if (process.env.NOW_URL || process.env.HEROKU_URL) {
+if (process.env.HEROKU_URL) {
     const http = require('http');
     const port = process.env.PORT || 8080;
 
-    http.createServer(bot.middleware()).listen(port, () => bot.setWebhook(process.env.NOW_URL || process.env.HEROKU_URL));
+    http.createServer(bot.middleware()).listen(port, () => bot.setWebhook(process.env.HEROKU_URL));
 } else {
     logger.debug('Could not find the now.sh/Heroku environment variables. Trying to use the local ngrok server.');
     return ngrok.getPublicUrl().then(publicUrl => {
