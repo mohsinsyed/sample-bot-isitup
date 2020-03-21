@@ -35,7 +35,7 @@ npm install -g now
 now -e VIBER_PUBLIC_ACCOUNT_ACCESS_TOKEN_KEY="YOUR_PUBLIC_ACCOUNT_TOKEN"
 ```
 
-**That's it!** Now your bot is deployed. Start talking with it in your Viber app. Simply navigate to your Public Account and click on the `Message` button.
+**That's it!** Now your bot is deployed. Start talking with it in your Viber app. Simply navigate to your Public Account and click on the `Message` buttons.
 
 ## License
 
